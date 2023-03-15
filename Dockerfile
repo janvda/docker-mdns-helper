@@ -1,5 +1,5 @@
 FROM python:3.9-alpine
-LABEL maintainer="stephane@apiou.org"
+LABEL maintainer="stephane@apiou.org, Jan VdA"
 
 # install dbus module for python
 RUN apk add py3-dbus  --no-cache 
@@ -19,7 +19,7 @@ WORKDIR /app/
 
 COPY . .
 
-#RUN pip install docker dbus-python
+#RUN pip install dbus-python
 
 ENTRYPOINT ["python", "start.py"]
 CMD ["-r"]

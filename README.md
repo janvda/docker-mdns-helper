@@ -1,5 +1,9 @@
 # Docker-mdns-helper
 
+**github location**: https://github.com/janvda/docker-mdns-helper
+
+Here below the original contents of this README
+
 This service publishes CNAME records pointing to the local host over
 [multicast DNS](http://www.multicastdns.org) using the [Avahi](http://www.avahi.org/wiki/AboutAvahi)
 daemon found in all major Linux distributions. Useful as a poor-man's service discovery or as a

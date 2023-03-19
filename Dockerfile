@@ -5,8 +5,8 @@ LABEL maintainer="stephane@apiou.org, Jan VdA"
 RUN apk add py3-dbus  --no-cache 
 
 RUN cd /usr/lib/python3.10/site-packages && \
-    ln -s _dbus_bindings.cpython-310-arm-linux-gnueabihf.so _dbus_bindings.so && \
-    ln -s _dbus_glib_bindings.cpython-310-arm-linux-gnueabihf.so _dbus_glib_bindings.so
+    ln -s _dbus_bindings.cpython-310-*.so _dbus_bindings.so && \
+    ln -s _dbus_glib_bindings.cpython-310-*.so _dbus_glib_bindings.so
 
 ENV PYTHONPATH=/usr/lib/python3.10/site-packages
 

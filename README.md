@@ -4,6 +4,12 @@
 
 This is a fork of https://github.com/stefapi/docker-mdns-helper
 
+## Change History
+
+* 1.0.3 : logs ignored domains at info level instead of debug level
+* 1.0.2 : Ignore domains if they don't have format <name>.local
+* 1.0.1 : library fix for amd64 architecture
+# Original README
 *Here below a copy of the contents of the original README.md*
 
 This service publishes CNAME records pointing to the local host over

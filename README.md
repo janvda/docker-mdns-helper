@@ -4,8 +4,24 @@
 
 This is a fork of https://github.com/stefapi/docker-mdns-helper
 
+## docker-compose service definition
+
+```yaml
+  docker-mdns-helper:
+    container_name: mdns
+    image: janvda/docker-mdns-helper:1.0.4
+    labels:
+      - "docker-dashy.enable=false"
+    volumes:
+      - /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket
+      - /var/run/docker.sock:/var/run/docker.sock
+    privileged: true
+    restart: unless-stopped
+```
+
 ## Change History
 
+* 1.0.4 : removed logging of ignored domains to limit amount of logging.
 * 1.0.3 : logs ignored domains at info level instead of debug level
 * 1.0.2 : Ignore domains if they don't have format <name>.local
 * 1.0.1 : library fix for amd64 architecture

@@ -46,8 +46,6 @@ class DockerDomains(object):
                                     match1_parts = match1.group(1).split(".")
                                     if (match1_parts[-1] == 'local') and (len(match1_parts) == 2):
                                       cnames[match1.group(1)] = True
-                                    else:
-                                      logging.info("Domain %s excluded - doesn't end with .local.", match1.group(1))
                 if "docker-mdns.domain" in labels:
                     cnames[labels["docker-mdns.domain"]] = True
 

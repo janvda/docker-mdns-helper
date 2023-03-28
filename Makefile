@@ -1,6 +1,6 @@
 DOCKERHUB_ID:=janvda
 SERVICE_NAME:=docker-mdns-helper
-SERVICE_VERSION:=1.0.3
+SERVICE_VERSION:=1.0.4
 ARCHITECTURES=linux/amd64,linux/arm/v7,linux/arm64/v8
 
 # BUILD_DOCKER_CONTEXT specifies the docker context of the build machine
